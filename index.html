@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f5ef">
+    <title>French Numbers — Number practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <span class="top-note"><span class="status-dot"></span> A little practice goes a long way</span>
+      </header>
+
+      <section class="practice-layout" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow">YOUR DAILY FRENCH PRACTICE</p>
+          <h1 id="page-title">Numbers, <span>in French.</span></h1>
+          <p class="intro-copy">A number will appear. Write it out in French and see how you did.</p>
+        </div>
+
+        <section class="practice-card" aria-label="Number practice">
+          <div class="card-top">
+            <div>
+              <label class="field-label" for="category">PICK YOUR PRACTICE</label>
+              <select id="category" name="category">
+                <option value="0-20">Numbers 0–20</option>
+                <option value="20-70">Numbers 20–70</option>
+                <option value="70-100">Numbers 70–100</option>
+                <option value="0-100">Numbers 0–100</option>
+              </select>
+            </div>
+            <div class="score" aria-live="polite">
+              <span class="score-label">ON THIS SESSION</span>
+              <span class="score-value"><span id="correct-count">0</span><span class="score-divider">/</span><span id="answered-count">0</span></span>
+            </div>
+          </div>
+
+          <div class="question-area">
+            <div class="question-label"><span class="sparkle" aria-hidden="true">✳</span> WRITE THIS NUMBER IN FRENCH</div>
+            <div class="number-display" id="number-prompt" aria-live="polite">42</div>
+            <form id="answer-form" novalidate>
+              <label class="sr-only" for="answer">Type the number in French</label>
+              <div class="answer-row">
+                <input id="answer" name="answer" type="text" placeholder="e.g. quarante-deux" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <button class="check-button" type="submit">Check answer <span aria-hidden="true">↗</span></button>
+              </div>
+            </form>
+            <div id="feedback" class="feedback" role="status" aria-live="polite">Take your time — you’ve got this.</div>
+          </div>
+
+          <div class="card-bottom">
+            <span><span class="keyboard-key">ENTER</span> to check your answer</span>
+            <button id="skip-button" class="skip-button" type="button">Skip this one <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <footer class="page-footer">
+          <span>Made for curious minds <span aria-hidden="true">✳</span></span>
+          <button id="reset-button" type="button">Reset score</button>
+        </footer>
+      </section>
+
+      <div class="decoration decoration-one" aria-hidden="true">bonjour</div>
+      <div class="decoration decoration-two" aria-hidden="true">123</div>
+    </main>
+  </body>
+</html>
